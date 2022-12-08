@@ -20,45 +20,14 @@ public class Tehtävä {
 		
 		// Object 3
 		Console console3 = new Console("Nintendo", "400$", "7.7");
-		console3.printData();
+		console3.printData();	
 		
+		// Change data object
+		Console console4 = new Console("", "", "", true, false, true);
+		console4.printData();
 		
-// OLD USELESS CODE	BELOW	
-		// Console on / off
-//		console.startup();
-//		if (console.isOn == true)
-//		{
-//			System.out.println("Console is on.");
-//		}
-//		else
-//		{
-//			System.out.println("Console has been shut down.");
-//		} 
-		
-		// Controller connected / disconnected
-//		console.connected();
-//		if (console.controllerOn == true)
-//		{
-//			System.out.println("Controller is connected.");
-//		}
-//		else
-//		{
-//			System.out.println("Controller disconnected.");
-//		}
-		
-		// Is an app running in the system or not
-//		console.appRunning();
-//		if (console.appOn == true)
-//		{
-//			System.out.println("An app is currently running.");
-//		}
-//		else
-//		{
-//			System.out.println("An app is not in use.");
-//		}
-// OLD USELESS CODE ENDS HERE		
 	}
-	} // Main ends here!!!
+} // Main ends here!!!
 
 
 class Console
@@ -85,7 +54,7 @@ class Console
 	}
 	
 	
-	// Constructor 1
+	// Parameterized constructor 1
 	public Console(String brandName)
 	{
 		isOn = false;
@@ -97,7 +66,7 @@ class Console
 	}
 	
 	
-	// Constructor 2
+	// Parameterized constructor 2
 	public Console(String brandName, String priceCost)
 	{
 		isOn = false;
@@ -109,7 +78,7 @@ class Console
 	}
 	
 	
-	// Constructor 3
+	// Parameterized constructor 3
 	public Console(String brandName, String priceCost, String versionNumber)
 	{
 		isOn = false;
@@ -118,6 +87,18 @@ class Console
 		brand = brandName;
 		price = priceCost;
 		version = versionNumber;
+	}
+	
+	
+	// Change Data constructor
+	public Console(String brandName, String priceCost, String versionNumber, boolean isConsoleOn, boolean isControllerOn, boolean isAppsOn)
+	{
+		isOn = isConsoleOn;
+		controllerOn = isControllerOn;
+		appOn = isAppsOn;
+		brand = "" ;
+		price = "" ;
+		version = "";
 	}
 	
 	
@@ -184,7 +165,7 @@ class Console
 		{
 			System.out.println("An app is not in use.");
 		}
-		
 	}
+	
 	
 } // End of the class "Console"
